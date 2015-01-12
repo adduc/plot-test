@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="build">
+    <target name="build" depends="clean,prepare,plot" />
+
+    <target name="clean">
+        <delete dir="./build" />
+    </target>
+
+    <target name="prepare">
+        <mkdir dir="./build" />
+    </target>
+
+    <target name="plot">
+        <exec command='date +%S &gt; build/stat.csv' />
+    </target>
+</project>
