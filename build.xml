@@ -11,6 +11,6 @@
     </target>
 
     <target name="plot">
-        <exec command='date +%S &gt; build/stat.csv' />
+        <exec command='echo "YVALUE=$(date +%S)" &gt; build/stat.properties' />
     </target>
 </project>
